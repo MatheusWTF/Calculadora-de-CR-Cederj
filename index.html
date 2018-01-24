@@ -4,73 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">  
+  <link rel="stylesheet" href="./css/main.css">
   <title>Calculadora de CR || CEDERJ</title>
 </head>
 <body>
-  <nav class="grey darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Calculadora de CR</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://github.com/MatheusWTF/Calculadora-de-CR-Cederj">Github</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="https://github.com/MatheusWTF/Calculadora-de-CR-Cederj">Github</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
   <div class="container">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">Calcule seu CR</span>          
-        <div class="row">
-          <div class="input-field col l5 m5 s5">
-            <input type="number" id="nota" name="nota">
-            <label for="nota">Nota</label>
+    <div class="wrap">
+      <!-- User Input / Information -->
+      <div class="add-info">
+        <form>
+          <h1 class="info-title">
+            Adicione a Matéria e Nota Final
+          </h1>
+          <div class="form-control">
+              <label for="mat">Matéria</label>
+              <input type="text" name="mat" id="mat" class="full-wd input">
+            </div>
+          <div class="form-control">
+            <label for="nf">Nota Final</label>
+            <input type="text" name="nf" id="nf" class="full-wd input">
           </div>
-          <div class="col s2 m2 l2"></div>
-          <div class="input-field col l5 m5 s5">
-            <input type="number" id="ch" name="ch">
+          <div class="form-control">
             <label for="ch">Carga Horária</label>
+            <input type="text" name="ch" id="ch" class="full-wd input">
           </div>
-        </div>
-        <div class="row">
-          <div class=" col s6 m4 l2">
-            <input type="submit" value="Calcular" class="btn grey" id="calc">
+          <div class="form-control">
+            <input type="submit" value="Adicionar" class="full-wd">
           </div>
-          <div class="col s0 m4 l8"></div>
-          <div class=" col s6 m4 l2">
-            <input type="submit" value="Adicionar" class="btn blue lighten-1" id="add">
+        </form>
+        <div class="info-control">
+          <div class="calculo">
+            <div class="title-calc">
+              Cálculo do CR
+            </div>
+            <div class="calc">
+              <div class="upper-calc">
+                (CH<sub>1</sub> &times; N<sub>1</sub>) + (CH<sub>2</sub> &times; N<sub>2</sub>) + ... (CH<sub>N</sub> &times; N<sub>N</sub>)
+              </div>
+              <div class="lower-calc">
+                CH<sub>1</sub> + CH<sub>2</sub> + ... CH<sub>N</sub>
+              </div>
+            </div>
+          </div>
+          <div class="onde-achar">
+            <div class="title-oa">
+              Onde achar as Informações:
+            </div>
+            <div class="link-oa">
+                <a href="http://cederj.edu.br/cederj/wp-content/uploads/2014/01/Matriz-Computa%C3%A7%C3%A3o-UFF-2016.1.pdf" class="links">Computação</a> <br>
+                <a href="http://cederj.edu.br/vestibular/cederj-conheca-os-cursos/" class="links">Outros</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="card-action">
-        <h3 class="center">Seu CR será <span class="cr">0</span></h3>
-        <p><a class="modal-trigger" href="#modal1">Como achar a carga horária de cada matéria</a></p>
+      <!-- Input Visualization / Result -->
+      <div class="display-info">
+        <div class="result">
+          <h2 class="res">Seu CR é <span id="res-cr"></span></h2>
+        </div>
+        <div class="materias">
+          <table id="mat-info">
+            <tr>
+              <th>Matéria</th>
+              <th>Nota</th>
+              <th>Carga Horária</th>
+              <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-  <div id="modal1" class="modal bottom-sheet">
-      <div class="modal-content">
-        <h4>Achando a Carga Horária</h4>
-        <p>Primeiramente entre <a target="_blank" href="http://cederj.edu.br/vestibular/cederj-conheca-os-cursos/">aqui</a> e ache seu curso</p>
-        <p>Clique no link de seu curso e procure a Matriz Curricular (geralmente no final do conteúdo da pagina)</p>
-      </div>
-    </div>
-  
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
-  </script>
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

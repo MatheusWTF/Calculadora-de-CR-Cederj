@@ -1,0 +1,71 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+*{box-sizing: border-box;}
+body, html{margin:0; padding:0; background-color: #f4f4f4; font-family: 'Lato', sans-serif; color: rgb(0, 38, 48);}
+
+/* Global Formating */
+.container{width: 90%; margin: auto;}
+.wrap{display: flex; justify-content: center; align-items: center; height: 100vh;}
+
+/* Flex Formating */
+.add-info{min-width: 400px; background-color: white; border-radius: 10px; margin-right:10px; min-height: 600px; padding: 10px; box-shadow: 2px 2px 2px rgba(0,0,0,0.5);}
+.display-info{min-width: 400px; background-color: white; border-radius: 10px; margin-left: 10px; min-height: 600px;padding: 10px; box-shadow: 2px 2px 2px rgba(0,0,0,0.5);}
+
+/* Items Formating */
+table{width: 100%;}
+th{background-color: #f4f4f4; text-align: left; padding: 2px 5px 5px 5px;}
+tr:nth-child(odd){background-color: #f9f9f9;}
+.center-text{text-align: center;}
+.del{text-decoration: none; color: red;}
+
+/* Form */
+.form-control{margin: 15px 0;}
+.full-wd{width: 100%;}
+input{
+  background-color: transparent; 
+  border: none; 
+  border-bottom: 1px solid burlywood; 
+  padding: 2px 5px 5px 5px;
+  transition: border-bottom 300ms ease-in-out;
+  -webkit-transition: border-bottom 300ms ease-in-out;
+  -moz-transition: border-bottom 300ms ease-in-out;
+  -o-transition: border-bottom 300ms ease-in-out;
+}
+
+input:focus{outline: none; border-bottom: 2px solid rgb(177, 134, 78);}
+
+label{
+  display: block;
+  position: relative;
+  top: 22px;
+  left: 10px;
+  font-size: 10pt;
+  color: rgb(196, 169, 137);
+  pointer-events: none;
+  transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -moz-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -webkit-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -o-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+label.outside{
+  top: 0px;
+  left: 0px;
+  font-size: 12pt;
+  color: burlywood;
+  transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -moz-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -webkit-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+  -o-transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out, color 300ms ease-in-out;
+}
+input[type="submit"]{border: 1px solid burlywood; border-radius: 20px; padding: 5px; text-align: center; color: rgb(129, 90, 39); cursor: pointer;}
+
+/* info Formating & Styling */
+.info-control{margin-top: 50px; border-top: #f4f4f4 1px solid;}
+.title-calc{margin: 10px 0px;}
+.calc{text-align: center; background-color: #999; padding: 5px;  width: 80%;margin: auto; border-radius: 10px; color: white;}
+.upper-calc{border-bottom: 1px solid white; font-weight: bold;}
+.lower-calc{font-weight: bold;}
+sub{font-weight: 400; color: #f4f4f4;}
+.onde-achar{margin: 15px 0;}
+.links{text-decoration: none; color: darkgoldenrod}
