@@ -56,7 +56,7 @@
     },
     addInfo: function(mat, nt, ch){
       this.materias.push(mat);
-      this.nota.push(nt);
+      this.nota.push(nt.replace(',', '.'));
       this.cargaH.push(ch);
       this.showInfo(nt, ch, mat);
       this.calc();
